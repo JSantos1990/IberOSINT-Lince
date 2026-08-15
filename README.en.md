@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/banner.png" alt="Lince Banner">
+  <img src="docs/images/banner_lince.png" alt="Lince Banner">
 </p>
 
 <h1 align="center">Lince</h1>
