@@ -400,18 +400,6 @@ The long-term objective is to provide a flexible document intelligence platform 
 
 ---
 
-# Roadmap
-
-## Version 1.0
-
-- [x] Desktop graphical interface
-- [x] Multi-format document processing
-- [x] Google Gemini integration
-- [x] Ollama integration
-- [x] Automatic IOC extraction
-- [x] AI-assisted document analysis
-- [x] Modular architecture
-
 ## Future Development
 
 - [ ] Additional AI providers
@@ -420,26 +408,6 @@ The long-term objective is to provide a flexible document intelligence platform 
 - [ ] Advanced analytics dashboard
 - [ ] Additional export formats
 - [ ] Plugin architecture
-
----
-
-# Screenshots
-
-## Main Window
-
-<img src="docs/images/main-window.png" alt="Main Window">
-
----
-
-## AI Analysis
-
-<img src="docs/images/analysis.png" alt="AI Analysis">
-
----
-
-## Analysis Results
-
-<img src="docs/images/results.png" alt="Analysis Results">
 
 ---
 
