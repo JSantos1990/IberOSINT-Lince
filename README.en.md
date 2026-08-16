@@ -284,7 +284,7 @@ Typical users include:
 
 ## Main Window
 
-<img src="docs/images/main-window.png" alt="Main Window">
+<img src="docs/images/banner_lince.png" alt="Main Window">
 
 ---
 
