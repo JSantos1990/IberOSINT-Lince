@@ -366,18 +366,6 @@ La arquitectura modular facilita la incorporación de nuevos motores de IA, nuev
 
 ---
 
-# Roadmap
-
-## Versión 1.0
-
-- [x] Interfaz gráfica
-- [x] Procesamiento documental
-- [x] Google Gemini
-- [x] Ollama
-- [x] Extracción de IOC
-- [x] Generación de informes
-- [x] Arquitectura modular
-
 ## Próximas mejoras
 
 - [ ] Nuevos proveedores de IA
@@ -386,26 +374,6 @@ La arquitectura modular facilita la incorporación de nuevos motores de IA, nuev
 - [ ] Dashboard estadístico avanzado
 - [ ] Exportación en nuevos formatos
 - [ ] Sistema de plugins
-
----
-
-# Capturas
-
-## Pantalla principal
-
-<img src="docs/images/main-window.png" alt="Main Window">
-
----
-
-## Análisis mediante IA
-
-<img src="docs/images/analysis.png" alt="AI Analysis">
-
----
-
-## Resultados
-
-<img src="docs/images/results.png" alt="Results">
 
 ---
 
