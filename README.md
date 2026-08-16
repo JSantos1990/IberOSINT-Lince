@@ -252,7 +252,7 @@ La filosofía del proyecto consiste en asistir al analista, nunca en reemplazar 
 
 # Capturas
 
-## Pantalla principal
+## Cabecera
 
 <img src="docs/images/banner_lince.png" alt="Main Window">
 
@@ -266,7 +266,9 @@ La filosofía del proyecto consiste en asistir al analista, nunca en reemplazar 
 
 ## Resultados del análisis
 
-<img src="docs/images/results.png" alt="Results">
+<img src="docs/images/ioc-dashboard1.png" alt="Results">
+
+<img src="docs/images/ioc-dasboard2.png" alt="Results">
 
 ---
 
