@@ -282,7 +282,7 @@ Typical users include:
 
 # Screenshots
 
-## Main Window
+## Head
 
 <img src="docs/images/banner_lince.png" alt="Main Window">
 
@@ -296,7 +296,9 @@ Typical users include:
 
 ## Analysis Results
 
-<img src="docs/images/results.png" alt="Results">
+<img src="docs/images/ioc-dashboard1.png" alt="Results">
+
+<img src="docs/images/ioc-dashboard2.png" alt="Results">
 
 ---
 
