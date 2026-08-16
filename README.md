@@ -260,7 +260,7 @@ La filosofía del proyecto consiste en asistir al analista, nunca en reemplazar 
 
 ## Selección del proveedor de IA
 
-<img src="docs/images/ai-provider.png" alt="AI Provider">
+<img src="docs/images/ai-providers.png" alt="AI Provider">
 
 ---
 
