@@ -290,7 +290,7 @@ Typical users include:
 
 ## AI Provider Selection
 
-<img src="docs/images/ai-provider.png" alt="AI Provider">
+<img src="docs/images/ai-providers.png" alt="AI Provider">
 
 ---
 
