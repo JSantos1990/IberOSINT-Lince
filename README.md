@@ -212,10 +212,16 @@ Entre los elementos que pueden localizarse se encuentran:
 El objetivo es facilitar al analista la localización rápida de evidencias sin sustituir el proceso de validación humana.
 
 <p align="center">
-<img src="docs/images/ioc-dashboard.png" alt="IOC Dashboard" width="95%">
+<img src="docs/images/ioc-dashboard1.png" alt="IOC Dashboard" width="95%">
 </p>
 
-*Panel de indicadores obtenidos durante el análisis.*
+*Panel de indicadores obtenidos durante el análisis formato resumen.*
+
+<p align="center">
+<img src="docs/images/ioc-dashboard2.png" alt="IOC Dashboard" width="95%">
+</p>
+
+*Panel de indicadores obtenidos durante el análisis formato dashboard.*
 
 ---
 
