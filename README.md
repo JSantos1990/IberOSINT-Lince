@@ -254,7 +254,7 @@ La filosofía del proyecto consiste en asistir al analista, nunca en reemplazar 
 
 ## Pantalla principal
 
-<img src="docs/images/main-window.png" alt="Main Window">
+<img src="docs/images/banner_lince.png" alt="Main Window">
 
 ---
 
