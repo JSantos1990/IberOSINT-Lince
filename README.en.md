@@ -225,7 +225,13 @@ Examples include:
 The objective is to accelerate the identification of relevant evidence while leaving the final interpretation and validation to the analyst.
 
 <p align="center">
-<img src="docs/images/ioc-dashboard.png" alt="IOC Dashboard" width="95%">
+<img src="docs/images/ioc-dashboard1.png" alt="IOC Dashboard" width="95%">
+</p>
+
+*IOC extraction summary.*
+
+<p align="center">
+<img src="docs/images/ioc-dashboard2.png" alt="IOC Dashboard" width="95%">
 </p>
 
 *IOC extraction dashboard.*
