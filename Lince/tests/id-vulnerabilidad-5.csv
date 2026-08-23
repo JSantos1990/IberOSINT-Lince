@@ -1,0 +1,6 @@
+﻿ID,Vulnerabilidad,Estado
+VULN-001,Desbordamiento de búfer en módulo de autenticación,Pendiente de parche
+VULN-002,Configuración insegura en servidor API (exposición de endpoints internos),Mitigada
+VULN-003,Inyección SQL en formulario de login,En análisis
+VULN-004,Token JWT sin expiración configurada,Resuelta
+VULN-005,Falta de validación de entrada en servicio de archivos,Pendiente

