@@ -304,29 +304,143 @@ Para ejecutar Lince se recomienda el siguiente entorno:
 
 # Instalación
 
-Clonar el repositorio:
+Lince puede utilizarse en Ubuntu como aplicación independiente. Para funcionar, necesita disponer de al menos un motor de inteligencia artificial configurado:
+
+- **Ollama con IA local:** requiere tener instalado Ollama y descargar el modelo `qwen3:8b`.
+- **Gemini con IA en la nube:** requiere una API key propia de Gemini, que el usuario deberá introducir manualmente desde la propia interfaz de Lince.
+
+No es necesario configurar ambas opciones. Basta con disponer de al menos una de ellas para poder realizar análisis.
+
+---
+
+## 1. Instalar los requisitos del sistema
+
+Actualizar los repositorios del sistema:
+
+```bash
+sudo apt update
+```
+
+Instalar Python, Git y las herramientas necesarias para crear un entorno virtual:
+
+```bash
+sudo apt install python3 python3-venv python3-pip git
+```
+
+---
+
+## 2. Clonar el repositorio
+
+Clonar el repositorio oficial de Lince:
 
 ```bash
 git clone https://github.com/JSantos1990/IberOSINT-Lince.git
 ```
 
-Acceder al directorio:
+Acceder al directorio de la aplicación:
 
 ```bash
-cd IberOSINT-Lince
+cd IberOSINT-Lince/Lince
 ```
 
-Instalar las dependencias:
+---
+
+## 3. Crear y activar el entorno virtual
+
+Crear un entorno virtual de Python:
+
+```bash
+python3 -m venv venv
+```
+
+Activarlo:
+
+```bash
+source venv/bin/activate
+```
+
+Instalar las dependencias necesarias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Ejecutar la aplicación:
+---
+
+## 4. Configurar el motor de inteligencia artificial
+
+Lince permite utilizar dos motores de IA: **Ollama en local** o **Gemini en la nube**.
+
+Debe configurar al menos una de las siguientes opciones.
+
+### Opción A — Ollama con IA local
+
+Instalar Ollama en el sistema y descargar el modelo `qwen3:8b`:
 
 ```bash
-python app.py
+ollama pull qwen3:8b
 ```
+
+Una vez descargado el modelo, Lince podrá utilizar Ollama como motor de inteligencia artificial local.
+
+### Opción B — Gemini con IA en la nube
+
+Lince también permite utilizar la API de Gemini como motor de inteligencia artificial en la nube.
+
+Para utilizar esta opción:
+
+1. Obtenga su propia API key de Gemini.
+2. Inicie Lince.
+3. Seleccione **Gemini** como motor de IA.
+4. Introduzca su API key personal en el campo habilitado dentro de la aplicación.
+
+La API key no está incluida en el proyecto. Cada usuario debe utilizar su propia clave.
+
+---
+
+## 5. Ejecutar Lince
+
+Con el entorno virtual activado, ejecute:
+
+```bash
+python3 app.py
+```
+
+La aplicación se iniciará y podrá seleccionar el motor de inteligencia artificial que desee utilizar.
+
+---
+
+## Uso posterior
+
+En futuras ejecuciones, no será necesario volver a instalar las dependencias ni configurar nuevamente Ollama si ya se han realizado los pasos anteriores.
+
+Bastará con acceder al directorio de Lince:
+
+```bash
+cd IberOSINT-Lince/Lince
+```
+
+Activar el entorno virtual:
+
+```bash
+source venv/bin/activate
+```
+
+Y ejecutar la aplicación:
+
+```bash
+python3 app.py
+```
+
+---
+
+## Instalación recomendada
+
+Lince puede utilizarse de forma independiente siguiendo las instrucciones de este apartado.
+
+También forma parte del ecosistema completo de IberOSINT. Para obtener información sobre la instalación y distribución del ecosistema completo, consulte el repositorio principal de IberOSINT:
+
+https://github.com/JSantos1990/IberOSINT
 
 ---
 
