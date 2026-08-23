@@ -334,16 +334,59 @@ The recommended environment for running Lince is:
 
 # Installation
 
-Clone the repository:
+Lince can be used on Ubuntu as a standalone application. To work, it requires at least one configured artificial intelligence engine:
+
+- **Ollama with local AI:** requires Ollama to be installed and the `qwen3:8b` model to be downloaded.
+- **Gemini with cloud AI:** requires the user's own Gemini API key, which must be entered manually through the Lince interface.
+
+It is not necessary to configure both options. Having at least one of them configured is enough to perform analyses.
+
+---
+
+## 1. Install the system requirements
+
+Update the system repositories:
+
+```bash
+sudo apt update
+```
+
+Install Python, Git and the tools required to create a virtual environment:
+
+```bash
+sudo apt install python3 python3-venv python3-pip git
+```
+
+---
+
+## 2. Clone the repository
+
+Clone the official Lince repository:
 
 ```bash
 git clone https://github.com/JSantos1990/IberOSINT-Lince.git
 ```
 
-Navigate to the project directory:
+Navigate to the application directory:
 
 ```bash
-cd IberOSINT-Lince
+cd IberOSINT-Lince/Lince
+```
+
+---
+
+## 3. Create and activate the virtual environment
+
+Create a Python virtual environment:
+
+```bash
+python3 -m venv venv
+```
+
+Activate it:
+
+```bash
+source venv/bin/activate
 ```
 
 Install the required dependencies:
@@ -352,11 +395,82 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
-Launch the application:
+---
+
+## 4. Configure the artificial intelligence engine
+
+Lince allows you to use two AI engines: **Ollama locally** or **Gemini in the cloud**.
+
+You must configure at least one of the following options.
+
+### Option A — Ollama with local AI
+
+Install Ollama on your system and download the `qwen3:8b` model:
 
 ```bash
-python app.py
+ollama pull qwen3:8b
 ```
+
+Once the model has been downloaded, Lince will be able to use Ollama as its local artificial intelligence engine.
+
+### Option B — Gemini with cloud AI
+
+Lince also allows you to use the Gemini API as a cloud-based artificial intelligence engine.
+
+To use this option:
+
+1. Obtain your own Gemini API key.
+2. Launch Lince.
+3. Select **Gemini** as the AI engine.
+4. Enter your personal API key in the dedicated field within the application.
+
+The API key is not included in the project. Each user must use their own key.
+
+---
+
+## 5. Launch Lince
+
+With the virtual environment activated, run:
+
+```bash
+python3 app.py
+```
+
+The application will start and you will be able to select the artificial intelligence engine you want to use.
+
+---
+
+## Subsequent use
+
+For future launches, you will not need to reinstall the dependencies or configure Ollama again if the previous steps have already been completed.
+
+Simply navigate to the Lince directory:
+
+```bash
+cd IberOSINT-Lince/Lince
+```
+
+Activate the virtual environment:
+
+```bash
+source venv/bin/activate
+```
+
+And launch the application:
+
+```bash
+python3 app.py
+```
+
+---
+
+## Recommended installation
+
+Lince can be used independently by following the instructions in this section.
+
+It is also part of the complete IberOSINT ecosystem. For information about installing and distributing the complete ecosystem, please refer to the main IberOSINT repository:
+
+https://github.com/JSantos1990/IberOSINT
 
 ---
 
