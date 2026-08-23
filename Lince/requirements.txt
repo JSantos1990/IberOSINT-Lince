@@ -1,0 +1,8 @@
+customtkinter
+Pillow
+python-dotenv
+python-docx
+pypdf
+openpyxl
+requests
+google-genai
