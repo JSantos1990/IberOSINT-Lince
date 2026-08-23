@@ -1,0 +1,11 @@
+2026-08-20 12:50:02 | soc_sample_log.txt | gemini-flash-latest | Indicadores de compromiso (IOC) | OK
+2026-08-21 12:33:33 | soc_sample_log.txt | gemini-flash-latest | Indicadores de compromiso (IOC) | ERROR
+2026-08-21 13:45:22 | archivo1.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-21 14:06:52 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-21 18:14:07 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-21 18:16:45 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-21 18:27:35 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-21 18:41:04 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-21 18:50:09 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-22 07:30:00 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | ERROR
+2026-08-22 07:41:27 | soc_sample_log.txt | gemini-flash-latest | Resumen técnico | OK
