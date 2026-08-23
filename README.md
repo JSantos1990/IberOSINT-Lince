@@ -268,7 +268,7 @@ La filosofía del proyecto consiste en asistir al analista, nunca en reemplazar 
 
 <img src="docs/images/ioc-dashboard1.png" alt="Results">
 
-<img src="docs/images/ioc-dasboard2.png" alt="Results">
+<img src="docs/images/ioc-dashboard2.png" alt="Results">
 
 ---
 
