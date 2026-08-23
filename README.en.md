@@ -468,7 +468,7 @@ python3 app.py
 
 Lince can be used independently by following the instructions in this section.
 
-It is also part of the complete IberOSINT ecosystem. For information about installing and distributing the complete ecosystem, please refer to the main IberOSINT repository:
+It is also part of the complete IberOSINT ecosystem and can be launched with a simple double click on the icon. For information about installing and distributing the complete ecosystem, please refer to the main IberOSINT repository:
 
 https://github.com/JSantos1990/IberOSINT
 
