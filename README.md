@@ -178,9 +178,9 @@ Actualmente incorpora soporte para:
 
 ## Google Gemini
 
-Utiliza la API oficial de Google Gemini para realizar análisis avanzados mediante modelos de lenguaje alojados en la nube.
-
-Resulta especialmente útil para el procesamiento de documentos extensos y tareas complejas de interpretación.
+Permite realizar análisis avanzados mediante la API oficial de Google Gemini y sus modelos de lenguaje en la nube.
+La aplicación no incluye una clave API propia; cada usuario debe introducir su propia clave API de Google Gemini para poder utilizar esta función.
+Especialmente útil para el procesamiento de documentos extensos y tareas complejas de interpretación.
 
 ## Ollama
 
