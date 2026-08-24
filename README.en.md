@@ -178,7 +178,10 @@ Investigators can select the most appropriate AI engine depending on the sensiti
 
 ## Google Gemini
 
-Lince integrates with the official Google Gemini API to perform cloud-based document analysis using advanced Large Language Models.
+Enables advanced analysis using an official Google Gemini API and cloud-hosted language models.
+The application does not include an API key; each user must provide their own Google Gemini API key in the corresponding field to use this feature.
+
+It is particularly useful for processing large documents and performing complex interpretation tasks.
 
 This mode is particularly suitable for:
 
