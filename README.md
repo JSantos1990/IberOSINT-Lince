@@ -182,6 +182,12 @@ Permite realizar análisis avanzados mediante la API oficial de Google Gemini y 
 La aplicación no incluye una clave API propia; cada usuario debe introducir su propia clave API de Google Gemini para poder utilizar esta función.
 Especialmente útil para el procesamiento de documentos extensos y tareas complejas de interpretación.
 
+<p align="center">
+<img src="docs/images/gemini_api.png" alt="AI Providers" width="95%">
+</p>
+
+*Selección del proveedor Gemini de Inteligencia Artificial.*
+
 ## Ollama
 
 Permite ejecutar modelos de lenguaje completamente en local, garantizando que la información permanezca en el equipo del investigador.
@@ -192,7 +198,7 @@ Esta opción resulta especialmente adecuada cuando la privacidad de la informaci
 <img src="docs/images/ai-providers.png" alt="AI Providers" width="95%">
 </p>
 
-*Selección del proveedor de Inteligencia Artificial.*
+*Selección del proveedor Ollama de Inteligencia Artificial.*
 
 ---
 
