@@ -301,6 +301,8 @@ Typical users include:
 
 <img src="docs/images/ai-providers.png" alt="AI Provider">
 
+<img src="docs/images/gemini_api.png" alt="AI Provider">
+
 ---
 
 ## Analysis Results
