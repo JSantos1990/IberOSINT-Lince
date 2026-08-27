@@ -268,6 +268,8 @@ La filosofía del proyecto consiste en asistir al analista, nunca en reemplazar 
 
 <img src="docs/images/ai-providers.png" alt="AI Provider">
 
+<img src="docs/images/gemini_api.png" alt="AI Provider">
+
 ---
 
 ## Resultados del análisis
