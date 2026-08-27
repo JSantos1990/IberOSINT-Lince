@@ -190,6 +190,12 @@ This mode is particularly suitable for:
 - Advanced reasoning tasks.
 - High-quality analytical summaries.
 
+<p align="center">
+<img src="docs/images/gemini_api.png" alt="AI Providers" width="95%">
+</p>
+
+*Selection of Gemini Artificial Intelligence provider.*
+
 ---
 
 ## Ollama
@@ -208,7 +214,7 @@ Typical use cases include:
 <img src="docs/images/ai-providers.png" alt="AI Providers" width="95%">
 </p>
 
-*Selection of the Artificial Intelligence provider.*
+*Selection of Ollama Artificial Intelligence provider.*
 
 ---
 
